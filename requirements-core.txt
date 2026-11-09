@@ -1,0 +1,21 @@
+# Install PyTorch separately using the official PyTorch selector for your hardware.
+transformers>=5.22,<6
+accelerate>=1.15,<2
+datasets>=4.8,<6
+huggingface-hub
+safetensors
+tokenizers
+numpy
+pandas
+scipy
+scikit-learn
+seqeval==1.2.2
+pyyaml
+python-dotenv
+rich
+typer
+tensorboard
+matplotlib
+pyarrow
+pytest
+ruff

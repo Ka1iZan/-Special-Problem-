@@ -1,0 +1,17 @@
+project: spner
+model_name: FacebookAI/xlm-roberta-base
+seed: 42
+max_length: 256
+train:
+  learning_rate: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+  epochs: 10
+  early_stopping_patience: 2
+  gradient_clip_norm: 1.0
+  per_device_batch_size: 8
+  gradient_accumulation_steps: 2
+  precision: auto
+logging:
+  tensorboard: true
+  save_best_only: true

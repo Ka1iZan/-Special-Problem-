@@ -1,0 +1,4 @@
+# Official Kaggle CLI requires Python 3.11+. Keep separate from CPU/data tools.
+kaggle==2.2.5
+# Kaggle 2.2.5 imports six without declaring it directly.
+six==1.17.0

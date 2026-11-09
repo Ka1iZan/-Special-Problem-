@@ -1,0 +1,6 @@
+# Keep Kaggle's hardware-compatible PyTorch installation.
+transformers==5.22.2
+sentencepiece
+protobuf
+pyarrow==26.0.1
+pytest

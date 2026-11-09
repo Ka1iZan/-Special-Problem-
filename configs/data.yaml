@@ -1,0 +1,6 @@
+common_entity_types: [PER, LOC, ORG]
+ignore_index: -100
+tagalog:
+  datasets: [tlunified_ner, filner]
+  mode: combined_balanced
+filner_projection_file: configs/filner_projection.yaml

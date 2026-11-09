@@ -1,0 +1,17 @@
+{
+  "model_name": "FacebookAI/xlm-roberta-base",
+  "model_revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+  "seed": 42,
+  "max_length": 512,
+  "learning_rate": 0.00002,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "epochs": 10,
+  "patience": 2,
+  "gradient_clip": 1.0,
+  "ignore_policy": "reject",
+  "require_cuda": true,
+  "status": "pilot_defaults_not_final_experiment_protocol"
+}

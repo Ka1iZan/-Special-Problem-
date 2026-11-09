@@ -1,0 +1,18 @@
+method: proposed
+target: hil
+sources: [tag, ceb]
+budget_percent: 10
+prototype:
+  pooling: mean
+  mode: shared       # shared | per_source
+  layer: last
+  tau_align: 0.1
+  lambda_align: 0.5
+replay:
+  enabled: true
+  strategy: drift    # random | drift
+  memory_budget_examples: 600
+  replay_ratio: 0.25
+  monitor_every_steps: 100
+  tau_replay: 0.5
+  lambda_replay: 0.5

@@ -1,0 +1,24 @@
+{
+  "plan_id": "draft_principal_10pct_v1",
+  "status": "proposal_not_preregistered",
+  "alpha": 0.05,
+  "targets": ["tag", "ceb", "hil"],
+  "budget_percent": 10,
+  "bootstrap_draws": 9999,
+  "analysis_seed": 2026,
+  "minimum_recommended_pairs": 10,
+  "pair_match_fields": ["subset_id", "subset_seed", "train_seed", "data_manifest_id", "evaluation_manifest_id", "evaluation_policy_id", "model_revision", "common_training_config_id", "source_checkpoint_id", "source_macro_f1_before"],
+  "contrasts": [
+    {"id": "alignment_target", "a": "alignment", "b": "multisource_ft", "endpoint": "target_f1", "extra_match_fields": []},
+    {"id": "replay_retention", "a": "random_replay", "b": "multisource_ft", "endpoint": "source_macro_f1_after", "extra_match_fields": []},
+    {"id": "drift_retention", "a": "proposed", "b": "alignment_group_uniform", "endpoint": "source_macro_f1_after", "extra_match_fields": ["memory_id", "replay_schedule_id", "monitor_id", "alignment_config_id"]}
+  ],
+  "family": "all_3_contrasts_x_3_targets_at_10pct; Holm across all 9",
+  "notes": [
+    "A minus B. All F1 inputs are fractions in [0,1]. Source macro is the equal-source-language mean of each source's micro-F1.",
+    "proposed versus alignment_group_uniform isolates drift weighting from group balancing.",
+    "Target non-inferiority is not implemented or claimed: a domain-justified margin must be specified before final experiments.",
+    "Five and 25 percent budgets, per-class, overlap and correlation analyses are exploratory under this draft plan.",
+    "Independent pair_id blocks must independently sample training randomness and target subsets. Reusing a source checkpoint conditions inference on that checkpoint."
+  ]
+}
